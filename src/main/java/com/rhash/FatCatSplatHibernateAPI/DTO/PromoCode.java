@@ -28,10 +28,10 @@ public class PromoCode {
     
     private int currencyGiven;
     
-    @ManyToMany(mappedBy = "userPromoCodes",
-            fetch = FetchType.EAGER,
-            cascade = CascadeType.ALL)
-    private List<User> users = new ArrayList<>();
+//    @ManyToMany(mappedBy = "userPromoCodes",
+//            fetch = FetchType.EAGER,
+//            cascade = CascadeType.ALL)
+//    private List<User> users = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -73,13 +73,13 @@ public class PromoCode {
         this.currencyGiven = currencyGiven;
     }
 
-    public List<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(List<User> users) {
-        this.users = users;
-    }
+//    public List<User> getUsers() {
+//        return users;
+//    }
+//
+//    public void setUsers(List<User> users) {
+//        this.users = users;
+//    }
 
     @Override
     public int hashCode() {

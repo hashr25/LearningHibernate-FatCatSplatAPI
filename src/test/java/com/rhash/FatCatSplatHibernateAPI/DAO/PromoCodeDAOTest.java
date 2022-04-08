@@ -213,6 +213,8 @@ public class PromoCodeDAOTest {
         
         //Trying to delete by Id
         //This works because its not using an object, just naively deleting by ID
+        user.setUserPromoCodes(null);
+        userDao.save(user);
         promoCodeDao.deleteById(promoCode.getId()); // Fails
         
         //Trying to delete the object from the dao with the user in it.
