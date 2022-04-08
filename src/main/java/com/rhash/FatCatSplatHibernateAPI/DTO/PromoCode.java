@@ -28,9 +28,9 @@ public class PromoCode {
     
     private int currencyGiven;
     
-    @ManyToMany(mappedBy = "userPromoCodes", 
-            fetch = FetchType.EAGER, 
-            cascade = CascadeType.REMOVE)
+    @ManyToMany(mappedBy = "userPromoCodes",
+            fetch = FetchType.EAGER,
+            cascade = CascadeType.ALL)
     private List<User> users = new ArrayList<>();
 
     public int getId() {

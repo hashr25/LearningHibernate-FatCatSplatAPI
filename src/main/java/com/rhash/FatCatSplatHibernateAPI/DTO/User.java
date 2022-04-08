@@ -28,7 +28,7 @@ public class User {
     
     ///Change this back to userPromoCodes
     @ManyToMany(fetch = FetchType.EAGER, 
-            cascade = CascadeType.REMOVE)
+            cascade = CascadeType.ALL)
     private List<PromoCode> userPromoCodes = new ArrayList<>();
 
     public int getId() {
